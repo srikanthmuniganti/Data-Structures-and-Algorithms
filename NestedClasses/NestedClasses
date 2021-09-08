@@ -1,0 +1,76 @@
+
+ Two types of Nested Classes
+ 1. Static Nested Classes
+ 2. Non-Static Nested Class (a.k.a Inner Classes)
+ 
+ 
+ A) Static Nested Classes:
+ 
+1. This static nested class can access all the methods and variables of outer class including private 
+2. and can only access static variables and methods of outer class
+3. By default the methods in Static Nested Class will not become static, when need to make it static explicitly.
+
+* creating object:
+		Student c=new College.Student();
+		
+* Accessing static methods in Nested class:
+ 		College.Student.msg();
+ 		
+ 		
+
+ B) Non-Static Nested Class: (a.k.a Inner Classes)
+ 
+ 1. Member Inner Class ----> class created within class and outside method
+ 
+ 	creating Objects and accessing it:
+ 	
+		Department department=new Department();
+		Department.Student2 s=department. new Student2();
+		
+ 2. Anonymous Inner Class ----> class created for implementing an interface or extending class. 
+ 								The java compiler decides its name.
+ 	* only a single object is created
+ 	* class that has no name is known as an anonymous inner class in Java
+ 	* Java Anonymous inner class can be created in two ways:
+ 	
+ 		1. Class
+ 		
+ 			   1. Anonymous class implementation using class
+			   2. now compiler creates an anonymous class 
+			   3. which implements anonymousClass() method --> which could be overriding or overloading.
+			   4. where Department2 class is abstract, implementing abstract anonymousClass() method.
+			   
+			   Department2 department2=new Department2() {
+			   public void anonymousClass() {
+				   Student2 s=new Student2();
+			   }
+		       };
+		       
+		       5. Calling anonymous class method
+		       
+		       department2.anonymousClass();	
+ 		
+ 		
+ 		2. Interface		
+ 			   
+ 			    1. Anonymous class implementation ---> using Interface
+				2. Deps is an interface (in Department2.java file)
+				Deps deps=new Deps() {			
+				@Override
+				public void anonymousClass() {
+					System.out.println("\nInterface based Anonymous Class");
+					new Student2();
+					System.out.println("Interface based Anonymous Class");
+					
+				}
+				};
+				
+				3. Calling anonymous class method
+				deps.anonymousClass();
+ 		
+ 		
+ 		
+ 						
+ 								
+ 								
+ 3. Local Inner Class ----> A class was created within the method
