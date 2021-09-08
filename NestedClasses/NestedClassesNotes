@@ -67,10 +67,49 @@
 				
 				3. Calling anonymous class method
 				deps.anonymousClass();
- 		
- 		
- 		
- 						
  								
  								
  3. Local Inner Class ----> A class was created within the method
+ 				
+ 				1. Department3 java file
+ 				2. creating class inside method
+ 
+				public void getStudent() {
+				
+						System.out.println("Getting Student Class ----> Local Inner Class");
+				
+						class Student3 {
+							public Student3() {
+								System.err.println("\n\nDepartment id : " + id);
+								System.err.println("Department Name : " + getDeptName());
+								System.err.println("Hod  : " + getHodName());
+							}
+				
+							public void msg() {
+								System.out.println("Message from Inner Classs-----------------> Local Inner Class");
+							}
+						}
+						// accessing it 
+						Student3 s = new Student3();
+						s.msg();				
+				}
+				
+				
+4. Nested Interface:
+
+		---> Refer to InterfaceNesting.java file
+ 		---> we can create interface inside class as well as class inside a interface 
+ 		---> we can also use Nested Interfaces as well
+ 		---> outer class methods are not available for nested interface
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

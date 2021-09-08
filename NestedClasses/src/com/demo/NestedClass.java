@@ -62,8 +62,20 @@ public class NestedClass {
 			}
 		};
 		deps.anonymousClass();
+		
+		System.out.println("\nCalling Local Inner class from Nested Class");
+		Department3.getStudent();		
+		//Department3.getDeptName();
+		System.out.println("Called Local Inner class from Nested Class");
+		
+		
+		
+		// Nseted interface
+		new InterfaceNesting().inside();
 
 	}
+	
+	
 
 }
 
